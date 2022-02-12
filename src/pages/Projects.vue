@@ -1,7 +1,7 @@
 <script>
 export default {
 	data: () => ({
-		activeCategory: 'All',
+		activeCategory: '',
 		categories: [
 			{ key: '', name: 'All', icon: 'fas fa-border-all' },
 			{ key: 'web', name: 'Web Apps', icon: 'fas fa-globe' },
@@ -99,7 +99,7 @@ export default {
 
 <template>
 	<div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-20">
-		<div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+		<div class="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
 			<div>
 				<p
 					class="
@@ -119,36 +119,13 @@ export default {
 				</p>
 			</div>
 			<h2
-				class="
-					max-w-lg
-					mb-6
-					font-sans
-					text-3xl
-					font-bold
-					leading-none
-					tracking-tight
-					text-gray-900
-					sm:text-4xl
-					md:mx-auto
-				"
+				class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl mx-auto"
 			>
 				<span class="relative inline-block">
 					<svg
 						viewBox="0 0 52 24"
 						fill="currentColor"
-						class="
-							absolute
-							top-0
-							left-0
-							z-0
-							hidden
-							w-32
-							-mt-8
-							-ml-20
-							text-blue-gray-100
-							lg:w-32 lg:-ml-28 lg:-mt-10
-							sm:block
-						"
+						class="absolute top-0 left-0 z-0 w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10"
 					>
 						<defs>
 							<pattern id="7b568941-9ed0-4f49-85a0-5e21ca6c7ad6" x="0" y="0" width=".135" height=".30">
@@ -157,31 +134,29 @@ export default {
 						</defs>
 						<rect fill="url(#7b568941-9ed0-4f49-85a0-5e21ca6c7ad6)" width="52" height="24"></rect>
 					</svg>
-					<span class="relative">The</span>
+					<span class="relative">{{ items.length }} Projects Listed</span>
 				</span>
-				quick, brown fox jumps over a lazy dog
 			</h2>
 			<p class="text-base text-gray-700 md:text-lg">
-				Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa
-				quae.
+				See More On <a href="https://github.com/berkinakkaya" target="_blank" class="underline">GitHub</a>
 			</p>
 		</div>
 
-		<div class="grid grid-cols-2 xs:grid-cols-3 justify-around mb-8 mt-16 sm:flex flex-wrap">
+		<div class="grid grid-cols-2 justify-around mb-8 mt-16 sm:flex xs:grid-cols-3 flex-wrap">
 			<div
-				class="text-center cursor-pointer"
+				class="text-center cursor-pointer mb-8 sm:mt-0"
 				v-for="category in categories"
 				:key="category.key"
 				@click="activeCategory = category.key"
 			>
 				<div
-					class="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full sm:w-12 sm:h-12 duration-100"
+					class="flex items-center justify-center w-10 h-10 mx-auto rounded-full sm:w-12 sm:h-12 duration-100"
 					:class="activeCategory == category.key ? 'bg-teal-400 text-white' : 'bg-indigo-50 text-black'"
 				>
 					<i :class="category.icon"></i>
 				</div>
 				<h6
-					class="mb-2 text-sm leading-5 font-bold uppercase"
+					class="text-sm leading-5 font-bold uppercase mt-2"
 					:class="activeCategory == category.key ? 'tracking-wider' : 'opacity-50'"
 				>
 					{{ category.name }}
@@ -191,20 +166,11 @@ export default {
 
 		<div class="grid gap-5 row-gap-5 lg:grid-cols-4 sm:grid-cols-2">
 			<a
-				class="
-					project
-					inline-block
-					overflow-hidden
-					shadow-sm
-					border
-					rounded
-					bg-white
-					hover:z-10 hover:shadow-md hover:scale-105
-					relative
-					cursor-default
-				"
+				class="project inline-block overflow-hidden shadow-sm border rounded bg-white relative cursor-default"
 				:class="
-					(!activeCategory || item.category == activeCategory ? '' : 'scale-0') + (item.live ? ' cursor-pointer' : '')
+					(!activeCategory || item.category == activeCategory ? '' : 'scale-0') +
+					' ' +
+					(item.live ? 'hover:z-10 hover:shadow-md cursor-pointer hover:scale-105' : '')
 				"
 				v-for="item in items"
 				target="_blank"
@@ -255,6 +221,7 @@ export default {
 								duration-700
 								bg-white
 							"
+							v-if="item.live"
 						>
 							<i
 								class="text-4xl"
