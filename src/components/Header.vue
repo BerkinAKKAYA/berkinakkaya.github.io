@@ -2,51 +2,95 @@
 	<div class="bg-gray-900">
 		<div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			<div class="relative flex items-center justify-between">
-				<a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
+				<router-link to="/" aria-label="berkinakkaya" title="berkinakkaya" class="inline-flex items-center">
 					<h2 class="text-2xl leading-none tracking-tight font-bold text-white sm:text-3xl md:mx-auto">berkinakkaya</h2>
-				</a>
+				</router-link>
 				<ul class="flex items-center hidden space-x-8 lg:flex">
 					<li>
-						<a
-							href="/"
-							aria-label="Our product"
-							title="Our product"
+						<router-link
+							to="about"
+							aria-label="About Me"
+							title="About Me"
 							class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
 						>
 							About Me
-						</a>
+						</router-link>
 					</li>
 					<li>
-						<a
-							href="/"
-							aria-label="Our product"
-							title="Our product"
+						<router-link
+							to="projects"
+							aria-label="Projects"
+							title="Projects"
 							class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
 						>
 							Projects
-						</a>
+						</router-link>
 					</li>
 					<li>
-						<span
-							class="
-								font-medium
-								tracking-wide
-								text-gray-100
-								transition-colors
-								duration-200
-								hover:text-teal-accent-400
-								cursor-default
-							"
+						<router-link
+							to="contact"
+							aria-label="contact"
+							title="Contact"
+							class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
 						>
-							Social&nbsp;
-							<i class="fas fa-angle-down"></i>
-						</span>
+							Contact
+						</router-link>
+					</li>
+					<li>
+						<div class="dropdown">
+							<div
+								class="
+									font-medium
+									tracking-wide
+									text-gray-100
+									transition-colors
+									duration-200
+									hover:text-teal-accent-400
+									cursor-default
+									py-3
+								"
+							>
+								Find Me&nbsp;
+								<i class="fas fa-angle-down"></i>
+							</div>
+							<div class="dropdown-content p-2 bg-gray-900">
+								<a
+									href="https://twitter.com/berkinakkaya"
+									target="_blank"
+									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+								>
+									<i class="fab fa-twitter"></i>&nbsp; Twitter
+								</a>
+								<a
+									href="https://www.linkedin.com/in/berkinakkaya"
+									target="_blank"
+									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+								>
+									<i class="fab fa-linkedin"></i>&nbsp; LinkedIn
+								</a>
+								<a
+									href="https://github.com/berkinakkaya"
+									target="_blank"
+									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+								>
+									<i class="fab fa-github"></i>&nbsp; GitHub
+								</a>
+								<a
+									href="https://berkinakkaya.medium.com/"
+									target="_blank"
+									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+								>
+									<i class="fab fa-medium"></i>&nbsp; Medium
+								</a>
+							</div>
+						</div>
 					</li>
 				</ul>
 				<ul class="flex items-center hidden space-x-8 lg:flex">
 					<li>
 						<a
-							href="/"
+							href="https://berkinakkaya.medium.com/"
+							target="_blank"
 							class="
 								inline-flex
 								items-center
@@ -91,28 +135,15 @@
 							></path>
 						</svg>
 					</button>
-					<div v-if="isMenuOpen" class="absolute top-0 left-0 w-full">
+					<div v-if="isMenuOpen" class="absolute top-0 left-0 w-full z-10">
 						<div class="p-5 bg-white border rounded shadow-sm">
 							<div class="flex items-center justify-between mb-4">
 								<div>
-									<a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
-										<svg
-											class="w-8 text-deep-purple-accent-400"
-											viewBox="0 0 24 24"
-											stroke-linejoin="round"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-miterlimit="10"
-											stroke="currentColor"
-											fill="none"
-										>
-											<rect x="3" y="1" width="7" height="12"></rect>
-											<rect x="3" y="17" width="7" height="6"></rect>
-											<rect x="14" y="1" width="7" height="6"></rect>
-											<rect x="14" y="11" width="7" height="12"></rect>
-										</svg>
-										<span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">Company</span>
-									</a>
+									<router-link to="/" aria-label="berkinakkaya" title="berkinakkaya" class="inline-flex items-center">
+										<h2 class="text-2xl leading-none tracking-tight font-bold text-gray-900 sm:text-3xl md:mx-auto">
+											berkinakkaya
+										</h2>
+									</router-link>
 								</div>
 								<div>
 									<button
@@ -142,10 +173,10 @@
 							<nav>
 								<ul class="space-y-4">
 									<li>
-										<a
-											href="/"
-											aria-label="Our product"
-											title="Our product"
+										<router-link
+											to="about"
+											aria-label="About Me"
+											title="About Me"
 											class="
 												font-medium
 												tracking-wide
@@ -154,14 +185,15 @@
 												duration-200
 												hover:text-deep-purple-accent-400
 											"
-											>Product</a
 										>
+											About Me
+										</router-link>
 									</li>
 									<li>
-										<a
-											href="/"
-											aria-label="Our product"
-											title="Our product"
+										<router-link
+											to="/projects"
+											aria-label="Projects"
+											title="Projects"
 											class="
 												font-medium
 												tracking-wide
@@ -170,14 +202,14 @@
 												duration-200
 												hover:text-deep-purple-accent-400
 											"
-											>Features</a
+											>Projects</router-link
 										>
 									</li>
 									<li>
-										<a
-											href="/"
-											aria-label="Product pricing"
-											title="Product pricing"
+										<router-link
+											to="/contact"
+											aria-label="Contact"
+											title="Contact"
 											class="
 												font-medium
 												tracking-wide
@@ -186,14 +218,15 @@
 												duration-200
 												hover:text-deep-purple-accent-400
 											"
-											>Pricing</a
+											>Contact</router-link
 										>
 									</li>
 									<li>
 										<a
-											href="/"
-											aria-label="About us"
-											title="About us"
+											href="https://berkinakkaya.medium.com/"
+											target="_blank"
+											aria-label="Blog"
+											title="Blog"
 											class="
 												font-medium
 												tracking-wide
@@ -202,35 +235,33 @@
 												duration-200
 												hover:text-deep-purple-accent-400
 											"
-											>About us</a
+											>Blog</a
 										>
 									</li>
 									<li>
-										<a
-											href="/"
-											class="
-												inline-flex
-												items-center
-												justify-center
-												w-full
-												h-12
-												px-6
-												font-medium
-												tracking-wide
-												text-white
-												transition
-												duration-200
-												rounded
-												shadow-md
-												bg-deep-purple-accent-400
-												hover:bg-deep-purple-accent-700
-												focus:shadow-outline focus:outline-none
-											"
-											aria-label="Sign up"
-											title="Sign up"
-										>
-											Sign up
-										</a>
+										<div class="flex items-center space-x-5 text-2xl">
+											<a
+												href="https://twitter.com/berkinakkaya"
+												target="_blank"
+												class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+											>
+												<i class="fab fa-twitter"></i>
+											</a>
+											<a
+												href="https://www.linkedin.com/in/berkinakkaya"
+												target="_blank"
+												class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+											>
+												<i class="fab fa-linkedin"></i>
+											</a>
+											<a
+												href="https://github.com/berkinakkaya"
+												target="_blank"
+												class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+											>
+												<i class="fab fa-github"></i>
+											</a>
+										</div>
 									</li>
 								</ul>
 							</nav>

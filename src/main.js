@@ -1,12 +1,12 @@
 import { createApp } from 'vue';
 import { createStore } from 'vuex';
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from './pages/Home.vue';
-import Pricing from './pages/Pricing.vue';
-import References from './pages/References.vue';
-import Contact from './pages/Contact.vue';
 import Layout from './Layout.vue';
 import "./css/index.scss";
+import Home from './pages/Home.vue';
+import About from './pages/About.vue';
+import Projects from './pages/Projects.vue';
+import Contact from './pages/Contact.vue';
 
 const store = createStore({
 	state: {},
@@ -16,8 +16,8 @@ const router = createRouter({
 	history: createWebHistory(),
 	routes: [
 		{ path: '/', component: Home },
-		{ path: '/pricing', component: Pricing },
-		{ path: '/references', component: References },
+		{ path: '/about', component: About },
+		{ path: '/projects', component: Projects },
 		{ path: '/contact', component: Contact },
 	],
 });
