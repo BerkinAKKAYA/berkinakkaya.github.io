@@ -322,6 +322,14 @@ module.exports = {
         outline: '0 0 0 3px rgba(101, 31, 255, 0.4)',
       },
     },
+    screens: {
+      "xs": "400px",
+      "sm": '640px',
+      "md": '768px',
+      "lg": '1024px',
+      "xl": '1280px',
+      "2xl": '1536px',
+    }
   },
   variants: {
     scale: ['responsive', 'hover', 'focus', 'group-hover'],
