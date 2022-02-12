@@ -1,4 +1,99 @@
-<script setup>
-</script>
-
-<template>home</template>
+<template>
+	<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+		<div class="max-w-xl mx-auto lg:max-w-2xl">
+			<div class="flex flex-col mb-16 text-center sm:mb-0">
+				<a href="/" class="mb-6 mx-auto">
+					<div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
+						<svg class="w-10 h-10 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+							<polygon
+								stroke-width="3"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								fill="none"
+								points="29 13 14 29 25 29 23 39 38 23 27 23"
+							></polygon>
+						</svg>
+					</div>
+				</a>
+				<div class="max-w-xl mb-10 mx-auto text-center lg:max-w-2xl md:mb-12">
+					<h2
+						class="
+							max-w-lg
+							mb-6
+							font-sans
+							text-3xl
+							font-bold
+							leading-none
+							tracking-tight
+							text-gray-900
+							sm:text-4xl
+							mx-auto
+						"
+					>
+						<span class="relative inline-block">
+							<svg
+								viewBox="0 0 52 24"
+								fill="currentColor"
+								class="absolute top-0 left-0 z-0 w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 block"
+							>
+								<defs>
+									<pattern id="e77df901-b9d7-4b9b-822e-16b2d410795b" x="0" y="0" width=".135" height=".30">
+										<circle cx="1" cy="1" r=".7"></circle>
+									</pattern>
+								</defs>
+								<rect fill="url(#e77df901-b9d7-4b9b-822e-16b2d410795b)" width="52" height="24"></rect>
+							</svg>
+							<span class="relative">Berkin AKKAYA</span>
+						</span>
+					</h2>
+					<p class="text-base text-gray-700 md:text-lg">
+						Hi, i'm Berkin. I am a <span>front-end developer</span>. I also developed <span>mobile games</span>,
+						<span>productivity apps</span>, <span>npm packages</span> and cli tools before.
+					</p>
+				</div>
+				<div class="flex items-center md:justify-center">
+					<router-link
+						to="/about"
+						aria-label="About"
+						class="
+							inline-flex
+							items-center
+							justify-center
+							h-12
+							px-6
+							mr-6
+							font-medium
+							tracking-wide
+							text-white
+							transition
+							duration-200
+							rounded
+							shadow-md
+							bg-deep-purple-accent-400
+							hover:bg-deep-purple-accent-700
+							focus:shadow-outline focus:outline-none
+						"
+					>
+						About Me
+					</router-link>
+					<router-link
+						to="/projects"
+						aria-label="Projects"
+						class="
+							inline-flex
+							items-center
+							font-semibold
+							text-gray-800
+							transition-colors
+							duration-200
+							hover:text-deep-purple-accent-700
+						"
+					>
+						Projects &nbsp;
+						<i class="fas fa-angle-right"></i>
+					</router-link>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
