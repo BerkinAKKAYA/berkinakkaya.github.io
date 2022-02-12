@@ -1,7 +1,7 @@
 <template>
 	<div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-		<div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
-			<p class="text-sm text-gray-600">© Berkin AKKAYA, 2022</p>
+		<div class="flex flex-row flex-wrap justify-center xs:justify-between pt-5 pb-10 border-t">
+			<p class="text-sm text-gray-600 mr-5 my-1">© Berkin AKKAYA, 2022</p>
 
 			<div class="flex items-center space-x-5 text-2xl">
 				<a
