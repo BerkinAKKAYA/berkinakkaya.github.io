@@ -7,21 +7,21 @@
 				<a
 					href="https://twitter.com/berkinakkaya"
 					target="_blank"
-					class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+					class="text-gray-500 transition-colors hover:text-deep-purple-accent-400"
 				>
 					<i class="fab fa-twitter"></i>
 				</a>
 				<a
 					href="https://www.linkedin.com/in/berkinakkaya"
 					target="_blank"
-					class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+					class="text-gray-500 transition-colors hover:text-deep-purple-accent-400"
 				>
 					<i class="fab fa-linkedin"></i>
 				</a>
 				<a
 					href="https://github.com/berkinakkaya"
 					target="_blank"
-					class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+					class="text-gray-500 transition-colors hover:text-deep-purple-accent-400"
 				>
 					<i class="fab fa-github"></i>
 				</a>

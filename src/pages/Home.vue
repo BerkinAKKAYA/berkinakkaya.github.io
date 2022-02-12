@@ -66,7 +66,6 @@
 							tracking-wide
 							text-white
 							transition
-							duration-200
 							rounded
 							shadow-md
 							bg-deep-purple-accent-400
@@ -85,7 +84,6 @@
 							font-semibold
 							text-gray-800
 							transition-colors
-							duration-200
 							hover:text-deep-purple-accent-700
 						"
 					>

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+	transition: 0.3s;
+}
+
 .dropdown {
 	float: left;
 	overflow: hidden;
@@ -31,4 +35,13 @@
 
 .router-link-active {
 	color: rgb(29 233 182 / var(--tw-text-opacity));
+}
+
+.project.scale-0 {
+	position: absolute;
+	pointer-events: none;
+}
+
+.project:hover .hover-icon {
+	opacity: 0.9;
 }

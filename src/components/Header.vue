@@ -11,7 +11,7 @@
 							to="about"
 							aria-label="About Me"
 							title="About Me"
-							class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+							class="font-medium tracking-wide text-gray-100 transition-colors hover:text-teal-accent-400"
 						>
 							About Me
 						</router-link>
@@ -21,7 +21,7 @@
 							to="projects"
 							aria-label="Projects"
 							title="Projects"
-							class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+							class="font-medium tracking-wide text-gray-100 transition-colors hover:text-teal-accent-400"
 						>
 							Projects
 						</router-link>
@@ -31,7 +31,7 @@
 							to="contact"
 							aria-label="contact"
 							title="Contact"
-							class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+							class="font-medium tracking-wide text-gray-100 transition-colors hover:text-teal-accent-400"
 						>
 							Contact
 						</router-link>
@@ -44,7 +44,6 @@
 									tracking-wide
 									text-gray-100
 									transition-colors
-									duration-200
 									hover:text-teal-accent-400
 									cursor-default
 									py-3
@@ -57,28 +56,28 @@
 								<a
 									href="https://twitter.com/berkinakkaya"
 									target="_blank"
-									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors hover:text-teal-accent-400"
 								>
 									<i class="fab fa-twitter"></i>&nbsp; Twitter
 								</a>
 								<a
 									href="https://www.linkedin.com/in/berkinakkaya"
 									target="_blank"
-									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors hover:text-teal-accent-400"
 								>
 									<i class="fab fa-linkedin"></i>&nbsp; LinkedIn
 								</a>
 								<a
 									href="https://github.com/berkinakkaya"
 									target="_blank"
-									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors hover:text-teal-accent-400"
 								>
 									<i class="fab fa-github"></i>&nbsp; GitHub
 								</a>
 								<a
 									href="https://berkinakkaya.medium.com/"
 									target="_blank"
-									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors hover:text-teal-accent-400"
 								>
 									<i class="fab fa-medium"></i>&nbsp; Medium
 								</a>
@@ -101,7 +100,6 @@
 								tracking-wide
 								text-white
 								transition
-								duration-200
 								rounded
 								shadow-md
 								bg-deep-purple-accent-400
@@ -120,7 +118,7 @@
 					<button
 						aria-label="Open Menu"
 						title="Open Menu"
-						class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
+						class="p-2 -mr-1 transition rounded focus:outline-none focus:shadow-outline"
 						@click="isMenuOpen = true"
 					>
 						<svg class="w-5 text-gray-600" viewBox="0 0 24 24">
@@ -154,7 +152,6 @@
 											-mt-2
 											-mr-2
 											transition
-											duration-200
 											rounded
 											hover:bg-gray-200
 											focus:bg-gray-200 focus:outline-none focus:shadow-outline
@@ -182,7 +179,6 @@
 												tracking-wide
 												text-gray-700
 												transition-colors
-												duration-200
 												hover:text-deep-purple-accent-400
 											"
 										>
@@ -199,7 +195,6 @@
 												tracking-wide
 												text-gray-700
 												transition-colors
-												duration-200
 												hover:text-deep-purple-accent-400
 											"
 											>Projects</router-link
@@ -215,7 +210,6 @@
 												tracking-wide
 												text-gray-700
 												transition-colors
-												duration-200
 												hover:text-deep-purple-accent-400
 											"
 											>Contact</router-link
@@ -232,7 +226,6 @@
 												tracking-wide
 												text-gray-700
 												transition-colors
-												duration-200
 												hover:text-deep-purple-accent-400
 											"
 											>Blog</a
@@ -243,21 +236,21 @@
 											<a
 												href="https://twitter.com/berkinakkaya"
 												target="_blank"
-												class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+												class="text-gray-500 transition-colors hover:text-deep-purple-accent-400"
 											>
 												<i class="fab fa-twitter"></i>
 											</a>
 											<a
 												href="https://www.linkedin.com/in/berkinakkaya"
 												target="_blank"
-												class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+												class="text-gray-500 transition-colors hover:text-deep-purple-accent-400"
 											>
 												<i class="fab fa-linkedin"></i>
 											</a>
 											<a
 												href="https://github.com/berkinakkaya"
 												target="_blank"
-												class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
+												class="text-gray-500 transition-colors hover:text-deep-purple-accent-400"
 											>
 												<i class="fab fa-github"></i>
 											</a>

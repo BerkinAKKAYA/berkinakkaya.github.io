@@ -1,3 +1,102 @@
+<script>
+export default {
+	data: () => ({
+		activeCategory: 'All',
+		categories: [
+			{ key: '', name: 'All', icon: 'fas fa-border-all' },
+			{ key: 'web', name: 'Web Apps', icon: 'fas fa-globe' },
+			{ key: 'game', name: 'Games', icon: 'fas fa-gamepad' },
+			{ key: 'blockchain', name: 'Blockchain', icon: 'fa-brands fa-ethereum' },
+			{ key: 'cli', name: 'CLI', icon: 'fas fa-terminal' },
+			{ key: 'npm', name: 'NPM', icon: 'fa-brands fa-npm' },
+		],
+		items: [
+			{
+				category: 'web',
+				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				name: 'Svelte Chat',
+				description: 'Chat Application Backed by Firestore',
+				live: 'https://svelte-chat-berkinakkaya.web.app/',
+				source: 'https://github.com/BerkinAKKAYA/svelte-chat',
+			},
+			{
+				category: 'web',
+				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				name: 'Vueweeter',
+				description: 'Realtime Social Media App',
+				live: 'https://berkinakkaya.github.io/vueweeter',
+				source: 'https://github.com/BerkinAKKAYA/vueweeter',
+			},
+			{
+				category: 'npm',
+				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				name: 'svelte-image-gallery',
+				description: 'Fluid Image Container for Svelte',
+				live: 'http://npmjs.com/package/svelte-image-gallery',
+				source: 'https://github.com/BerkinAKKAYA/svelte-image-gallery',
+			},
+			{
+				category: 'game',
+				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				name: 'Stay In The Shadows',
+				description: 'Stealth & Action Game',
+				live: 'https://play.google.com/store/apps/details?id=com.BerkinAkkaya.StayintheShadows',
+				source: null,
+			},
+			{
+				category: 'game',
+				image: '/src/assets/project-thumbnails/split.webp',
+				name: 'Split',
+				description:
+					'Split is a hyper-casual endless game that you try to dodge obstacles as the game gets faster over time.',
+				live: 'https://play.google.com/store/apps/details?id=com.BerkinAkkaya.Split',
+				source: 'https://github.com/BerkinAKKAYA/Split',
+			},
+			{
+				category: 'game',
+				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				name: 'Jumpy',
+				description: 'Infinite Arcade Platformer',
+				live: 'https://play.google.com/store/apps/details?id=com.BerkinAkkaya.Split',
+				source: 'https://github.com/BerkinAKKAYA/Split',
+			},
+			{
+				category: 'web',
+				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				name: 'Timeline',
+				description: 'Minimalistic Calendar',
+				live: 'http://timeline-berkin.web.app/',
+				source: 'https://github.com/BerkinAKKAYA/Timeline',
+			},
+			{
+				category: 'web',
+				image: '/src/assets/project-thumbnails/pomolog.jpg',
+				name: 'Pomolog',
+				description: 'Save how many pomodoros have you done, see monthly charts.',
+				live: 'https://pomolog-berkinakkaya.web.app/',
+				source: 'https://github.com/BerkinAKKAYA/Pomolog',
+			},
+			{
+				category: 'web',
+				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				name: 'Focused YouTube',
+				description: 'YouTube without distractions, with bookmarks.',
+				live: 'https://focused-yt.web.app/',
+				source: 'https://github.com/BerkinAKKAYA/Focused-YouTube',
+			},
+			{
+				category: 'cli',
+				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				name: 'Weather Scraper',
+				description: 'Get monthly weather forecast via terminal, built with Selenium.',
+				live: null,
+				source: 'https://github.com/BerkinAKKAYA/WeatherScraper',
+			},
+		],
+	}),
+};
+</script>
+
 <template>
 	<div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-20">
 		<div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
@@ -68,210 +167,108 @@
 			</p>
 		</div>
 
-		<div class="grid grid-cols-2 gap-5 row-gap-5 mb-8 mt-16 md:grid-cols-6 xs:grid-cols-3">
-			<div class="text-center">
-				<div class="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-12 sm:h-12">
-					<i class="fas fa-border-all"></i>
+		<div class="grid grid-cols-2 xs:grid-cols-3 justify-around mb-8 mt-16 sm:flex flex-wrap">
+			<div
+				class="text-center cursor-pointer"
+				v-for="category in categories"
+				:key="category.key"
+				@click="activeCategory = category.key"
+			>
+				<div
+					class="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full sm:w-12 sm:h-12 duration-100"
+					:class="activeCategory == category.key ? 'bg-teal-400 text-white' : 'bg-indigo-50 text-black'"
+				>
+					<i :class="category.icon"></i>
 				</div>
-				<h6 class="mb-2 text-sm font-bold leading-5 tracking-wider uppercase">All</h6>
-			</div>
-			<div class="text-center">
-				<div class="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-12 sm:h-12">
-					<i class="fas fa-globe"></i>
-				</div>
-				<h6 class="mb-2 text-sm font-bold leading-5 tracking-wider uppercase">Web Apps</h6>
-			</div>
-			<div class="text-center">
-				<div class="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-12 sm:h-12">
-					<i class="fas fa-gamepad"></i>
-				</div>
-				<h6 class="mb-2 text-sm font-bold leading-5 tracking-wider uppercase">Games</h6>
-			</div>
-			<div class="text-center">
-				<div class="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-12 sm:h-12">
-					<i class="fa-brands fa-ethereum"></i>
-				</div>
-				<h6 class="mb-2 text-sm font-bold leading-5 tracking-wider uppercase">Blockchain</h6>
-			</div>
-			<div class="text-center">
-				<div class="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-12 sm:h-12">
-					<i class="fas fa-terminal"></i>
-				</div>
-				<h6 class="mb-2 text-sm font-bold leading-5 tracking-wider uppercase">CLI</h6>
-			</div>
-			<div class="text-center">
-				<div class="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-12 sm:h-12">
-					<i class="fa-brands fa-npm"></i>
-				</div>
-				<h6 class="mb-2 text-sm font-bold leading-5 tracking-wider uppercase">NPM</h6>
+				<h6
+					class="mb-2 text-sm leading-5 font-bold uppercase"
+					:class="activeCategory == category.key ? 'tracking-wider' : 'opacity-50'"
+				>
+					{{ category.name }}
+				</h6>
 			</div>
 		</div>
 
 		<div class="grid gap-5 row-gap-5 lg:grid-cols-4 sm:grid-cols-2">
 			<a
-				href="/"
-				aria-label="View Item"
-				class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
+				class="
+					project
+					inline-block
+					overflow-hidden
+					shadow-sm
+					border
+					rounded
+					bg-white
+					hover:z-10 hover:shadow-md hover:scale-105
+					relative
+					cursor-default
+				"
+				:class="
+					(!activeCategory || item.category == activeCategory ? '' : 'scale-0') + (item.live ? ' cursor-pointer' : '')
+				"
+				v-for="item in items"
+				target="_blank"
+				:key="item.name"
+				:href="item.live"
+				:aria-label="item.name"
 			>
+				<a
+					target="_blank"
+					class="
+						absolute
+						right-0
+						bg-white
+						rounded-bl-xl
+						px-2
+						py-1
+						shadow-md
+						hover:shadow-lg
+						md:opacity-60
+						hover:opacity-90 hover:px-3 hover:py-2
+					"
+					v-if="item.source"
+					:href="item.source"
+				>
+					<i class="fa-brands fa-github text-2xl"></i>
+				</a>
 				<div class="flex flex-col h-full">
-					<img
-						src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-						class="object-cover w-full h-48"
-						alt=""
-					/>
-					<div class="flex-grow border border-t-0 rounded-b">
+					<img :src="item.image" class="w-full h-48 object-contain" :alt="item.name" />
+					<div class="flex-grow border-t relative">
 						<div class="p-5">
-							<h6 class="mb-2 font-semibold leading-5">The doctor said</h6>
+							<h6 class="mb-2 font-semibold leading-5">{{ item.name }}</h6>
 							<p class="text-sm text-gray-900">
-								Sportacus andrew weatherall goose Refined gentlemen super mario des lynam alpha trion zap rowsdower.
+								{{ item.description }}
 							</p>
 						</div>
-					</div>
-				</div>
-			</a>
-			<a
-				href="/"
-				aria-label="View Item"
-				class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
-			>
-				<div class="flex flex-col h-full">
-					<img
-						src="https://images.pexels.com/photos/3182750/pexels-photo-3182750.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-						class="object-cover w-full h-48"
-						alt=""
-					/>
-					<div class="flex-grow border border-t-0 rounded-b">
-						<div class="p-5">
-							<h6 class="mb-2 font-semibold leading-5">Skate ipsum dolor</h6>
-							<p class="text-sm text-gray-900">Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a
-				href="/"
-				aria-label="View Item"
-				class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
-			>
-				<div class="flex flex-col h-full">
-					<img
-						src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-						class="object-cover w-full h-48"
-						alt=""
-					/>
-					<div class="flex-grow border border-t-0 rounded-b">
-						<div class="p-5">
-							<h6 class="mb-2 font-semibold leading-5">They urge you</h6>
-							<p class="text-sm text-gray-900">
-								A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear.
-							</p>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a
-				href="/"
-				aria-label="View Item"
-				class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
-			>
-				<div class="flex flex-col h-full">
-					<img
-						src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-						class="object-cover w-full h-48"
-						alt=""
-					/>
-					<div class="flex-grow border border-t-0 rounded-b">
-						<div class="p-5">
-							<h6 class="mb-2 font-semibold leading-5">Baseball ipsum dolor</h6>
-							<p class="text-sm text-gray-900">
-								Bro ipsum dolor sit amet gaper backside single track, manny Bike epic clipless. Schraeder drop gondy.
-							</p>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a
-				href="/"
-				aria-label="View Item"
-				class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
-			>
-				<div class="flex flex-col h-full">
-					<img
-						src="https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
-						class="object-cover w-full h-48"
-						alt=""
-					/>
-					<div class="flex-grow border border-t-0 rounded-b">
-						<div class="p-5">
-							<h6 class="mb-2 font-semibold leading-5">The doctor said</h6>
-							<p class="text-sm text-gray-900">
-								Sportacus andrew weatherall goose Refined gentlemen super mario des lynam alpha trion zap rowsdower.
-							</p>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a
-				href="/"
-				aria-label="View Item"
-				class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
-			>
-				<div class="flex flex-col h-full">
-					<img
-						src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-						class="object-cover w-full h-48"
-						alt=""
-					/>
-					<div class="flex-grow border border-t-0 rounded-b">
-						<div class="p-5">
-							<h6 class="mb-2 font-semibold leading-5">Skate ipsum dolor</h6>
-							<p class="text-sm text-gray-900">Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a
-				href="/"
-				aria-label="View Item"
-				class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
-			>
-				<div class="flex flex-col h-full">
-					<img
-						src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-						class="object-cover w-full h-48"
-						alt=""
-					/>
-					<div class="flex-grow border border-t-0 rounded-b">
-						<div class="p-5">
-							<h6 class="mb-2 font-semibold leading-5">They urge you</h6>
-							<p class="text-sm text-gray-900">
-								A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear.
-							</p>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a
-				href="/"
-				aria-label="View Item"
-				class="inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2"
-			>
-				<div class="flex flex-col h-full">
-					<img
-						src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-						class="object-cover w-full h-48"
-						alt=""
-					/>
-					<div class="flex-grow border border-t-0 rounded-b">
-						<div class="p-5">
-							<h6 class="mb-2 font-semibold leading-5">Baseball ipsum dolor</h6>
-							<p class="text-sm text-gray-900">
-								Bro ipsum dolor sit amet gaper backside single track, manny Bike epic clipless. Schraeder drop gondy.
-							</p>
+
+						<div
+							class="
+								hover-icon
+								grid
+								place-items-center
+								absolute
+								left-0
+								right-0
+								top-0
+								bottom-0
+								opacity-0
+								duration-700
+								bg-white
+							"
+						>
+							<i
+								class="text-4xl"
+								:class="item.category === 'game' ? 'fa-brands fa-google-play' : 'fas fa-external-link'"
+								v-if="item.live"
+							></i>
 						</div>
 					</div>
 				</div>
 			</a>
 		</div>
+
+		<p v-if="items.filter((x) => x.category === activeCategory).length == 0" class="text-center mt-5">
+			There is nothing to show here yet, but there will be very soon!
+		</p>
 	</div>
 </template>
