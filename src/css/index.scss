@@ -28,3 +28,7 @@
 		pointer-events: all;
 	}
 }
+
+.router-link-active {
+	color: rgb(29 233 182 / var(--tw-text-opacity));
+}
