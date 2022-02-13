@@ -3,7 +3,10 @@
 		<div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
 			<div class="relative flex items-center justify-between">
 				<router-link to="/" aria-label="berkinakkaya" title="berkinakkaya" class="inline-flex items-center">
-					<h2 class="text-2xl leading-none tracking-tight font-bold text-white sm:text-3xl md:mx-auto">berkinakkaya</h2>
+					<h2 class="text-2xl leading-none tracking-tight font-bold text-white sm:text-3xl md:mx-auto">
+						berkinakkaya
+						<small class="opacity-30">.dev</small>
+					</h2>
 				</router-link>
 				<ul class="flex items-center hidden space-x-8 lg:flex">
 					<li>
