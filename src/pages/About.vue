@@ -39,7 +39,7 @@
 
 		<p class="text-gray-700 md:text-lg mt-3">
 			I left high school at 10th grade to have more time to build games and learn English. I got pretty good at English
-			and started using Unity to build games. I worked at over 20 games, 3 of which published on Google Play. I was
+			and started using Unity to build games. I worked at over 10 games, 3 of which published on Google Play. I was
 			still learning web development in the meantime, svelte was my go-to framework and it was really easy to switch to
 			Vue after Vue 3 came out.
 		</p>
