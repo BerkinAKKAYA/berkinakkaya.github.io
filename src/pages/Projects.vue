@@ -12,6 +12,22 @@ export default {
 		],
 		items: [
 			{
+				category: 'npm',
+				image: '/src/assets/project-thumbnails/svelte-image-gallery.jpg',
+				name: 'svelte-image-gallery',
+				description: 'Fluid Image Container for Svelte',
+				live: 'http://npmjs.com/package/svelte-image-gallery',
+				source: 'https://github.com/BerkinAKKAYA/svelte-image-gallery',
+			},
+			{
+				category: 'web',
+				image: '/src/assets/project-thumbnails/pomolog.jpg',
+				name: 'Pomolog',
+				description: 'Save how many pomodoros have you done, see monthly charts.',
+				live: 'https://pomolog-berkinakkaya.web.app/',
+				source: 'https://github.com/BerkinAKKAYA/Pomolog',
+			},
+			{
 				category: 'web',
 				image: '/src/assets/project-thumbnails/svelte-chat.jpg',
 				name: 'Svelte Chat',
@@ -26,14 +42,6 @@ export default {
 				description: 'Realtime Social Media App',
 				live: 'https://berkinakkaya.github.io/vueweeter',
 				source: 'https://github.com/BerkinAKKAYA/vueweeter',
-			},
-			{
-				category: 'npm',
-				image: '/src/assets/project-thumbnails/svelte-image-gallery.jpg',
-				name: 'svelte-image-gallery',
-				description: 'Fluid Image Container for Svelte',
-				live: 'http://npmjs.com/package/svelte-image-gallery',
-				source: 'https://github.com/BerkinAKKAYA/svelte-image-gallery',
 			},
 			{
 				category: 'game',
@@ -67,14 +75,6 @@ export default {
 				description: 'Minimalistic Calendar',
 				live: 'http://timeline-berkin.web.app/',
 				source: 'https://github.com/BerkinAKKAYA/Timeline',
-			},
-			{
-				category: 'web',
-				image: '/src/assets/project-thumbnails/pomolog.jpg',
-				name: 'Pomolog',
-				description: 'Save how many pomodoros have you done, see monthly charts.',
-				live: 'https://pomolog-berkinakkaya.web.app/',
-				source: 'https://github.com/BerkinAKKAYA/Pomolog',
 			},
 			{
 				category: 'web',
