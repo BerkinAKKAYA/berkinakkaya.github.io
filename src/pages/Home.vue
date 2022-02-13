@@ -47,11 +47,11 @@
 						</span>
 					</h2>
 					<p class="text-base text-gray-700 md:text-lg">
-						Hi, i'm Berkin. I am a <span>front-end developer</span>. I also developed <span>mobile games</span>,
-						<span>productivity apps</span>, <span>npm packages</span> and cli tools before.
+						Hi, i'm Berkin. I am a <b>front-end developer</b>. I also developed <i>mobile games</i>,
+						<i>productivity apps</i>, <i>npm packages</i> and <i>cli tools</i> before.
 					</p>
 				</div>
-				<div class="flex items-center md:justify-center">
+				<div class="flex items-center justify-center">
 					<router-link
 						to="/about"
 						aria-label="About"
