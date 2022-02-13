@@ -13,7 +13,7 @@ export default {
 		items: [
 			{
 				category: 'web',
-				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				image: '/src/assets/project-thumbnails/svelte-chat.jpg',
 				name: 'Svelte Chat',
 				description: 'Chat Application Backed by Firestore',
 				live: 'https://svelte-chat-berkinakkaya.web.app/',
@@ -21,7 +21,7 @@ export default {
 			},
 			{
 				category: 'web',
-				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				image: '/src/assets/project-thumbnails/vueweeter.jpg',
 				name: 'Vueweeter',
 				description: 'Realtime Social Media App',
 				live: 'https://berkinakkaya.github.io/vueweeter',
@@ -29,7 +29,7 @@ export default {
 			},
 			{
 				category: 'npm',
-				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				image: '/src/assets/project-thumbnails/svelte-image-gallery.jpg',
 				name: 'svelte-image-gallery',
 				description: 'Fluid Image Container for Svelte',
 				live: 'http://npmjs.com/package/svelte-image-gallery',
@@ -37,7 +37,7 @@ export default {
 			},
 			{
 				category: 'game',
-				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				image: '/src/assets/project-thumbnails/stay-in-the-shadows.jpg',
 				name: 'Stay In The Shadows',
 				description: 'Stealth & Action Game',
 				live: 'https://play.google.com/store/apps/details?id=com.BerkinAkkaya.StayintheShadows',
@@ -54,15 +54,15 @@ export default {
 			},
 			{
 				category: 'game',
-				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				image: '/src/assets/project-thumbnails/jumpy.jpg',
 				name: 'Jumpy',
 				description: 'Infinite Arcade Platformer',
-				live: 'https://play.google.com/store/apps/details?id=com.BerkinAkkaya.Split',
-				source: 'https://github.com/BerkinAKKAYA/Split',
+				live: 'https://play.google.com/store/apps/details?id=com.BerkinAkkaya.Jumpy',
+				source: 'https://github.com/BerkinAKKAYA/Jumpy',
 			},
 			{
 				category: 'web',
-				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				image: '/src/assets/project-thumbnails/timeline.jpg',
 				name: 'Timeline',
 				description: 'Minimalistic Calendar',
 				live: 'http://timeline-berkin.web.app/',
@@ -78,7 +78,7 @@ export default {
 			},
 			{
 				category: 'web',
-				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				image: '/src/assets/project-thumbnails/focused-youtube.jpg',
 				name: 'Focused YouTube',
 				description: 'YouTube without distractions, with bookmarks.',
 				live: 'https://focused-yt.web.app/',
@@ -86,7 +86,7 @@ export default {
 			},
 			{
 				category: 'cli',
-				image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb',
+				image: '/src/assets/project-thumbnails/python.png',
 				name: 'Weather Scraper',
 				description: 'Get monthly weather forecast via terminal, built with Selenium.',
 				live: null,
@@ -134,7 +134,7 @@ export default {
 						</defs>
 						<rect fill="url(#7b568941-9ed0-4f49-85a0-5e21ca6c7ad6)" width="52" height="24"></rect>
 					</svg>
-					<span class="relative">{{ items.length }} Projects Listed</span>
+					<span class="relative">{{ items.length }} of my Personal Projects</span>
 				</span>
 			</h2>
 			<p class="text-base text-gray-700 md:text-lg">
@@ -234,7 +234,7 @@ export default {
 			</a>
 		</div>
 
-		<p v-if="items.filter((x) => x.category === activeCategory).length == 0" class="text-center mt-5">
+		<p v-if="activeCategory && items.filter((x) => x.category === activeCategory).length == 0" class="text-center mt-5">
 			There is nothing to show here yet, but there will be very soon!
 		</p>
 	</div>
