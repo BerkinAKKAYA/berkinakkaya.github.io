@@ -40,58 +40,19 @@
 						</router-link>
 					</li>
 					<li>
-						<div class="dropdown">
-							<div
-								class="
-									font-medium
-									tracking-wide
-									text-gray-100
-									transition-colors
-									hover:text-teal-accent-400
-									cursor-default
-									py-3
-								"
-							>
-								Find Me&nbsp;
-								<i class="fas fa-angle-down"></i>
-							</div>
-							<div class="dropdown-content p-2 bg-gray-900">
-								<a
-									href="https://twitter.com/berkinakkaya"
-									target="_blank"
-									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors hover:text-teal-accent-400"
-								>
-									<i class="fab fa-twitter"></i>&nbsp; Twitter
-								</a>
-								<a
-									href="https://www.linkedin.com/in/berkinakkaya"
-									target="_blank"
-									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors hover:text-teal-accent-400"
-								>
-									<i class="fab fa-linkedin"></i>&nbsp; LinkedIn
-								</a>
-								<a
-									href="https://github.com/berkinakkaya"
-									target="_blank"
-									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors hover:text-teal-accent-400"
-								>
-									<i class="fab fa-github"></i>&nbsp; GitHub
-								</a>
-								<a
-									href="https://berkinakkaya.medium.com/"
-									target="_blank"
-									class="block py-2 pl-3 pr-5 text-gray-100 transition-colors hover:text-teal-accent-400"
-								>
-									<i class="fab fa-medium"></i>&nbsp; Medium
-								</a>
-							</div>
-						</div>
+						<a
+							href="https://berkinakkaya.medium.com/"
+							target="_blank"
+							class="font-medium tracking-wide text-gray-100 transition-colors hover:text-teal-accent-400"
+						>
+							Blog&nbsp; <i class="fas fa-external-link-alt"></i>
+						</a>
 					</li>
 				</ul>
 				<ul class="flex items-center hidden space-x-8 lg:flex">
 					<li>
 						<a
-							href="https://berkinakkaya.medium.com/"
+							href="public/resume.pdf"
 							target="_blank"
 							class="
 								inline-flex
@@ -112,8 +73,8 @@
 							aria-label="Blog"
 							title="Blog"
 						>
-							Blog &nbsp;
-							<i class="fas fa-angle-right"></i>
+							Resume &nbsp;
+							<i class="fas fa-external-link-alt"></i>
 						</a>
 					</li>
 				</ul>
