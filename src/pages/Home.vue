@@ -94,4 +94,37 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-25">
+		<div class="grid gap-10 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
+			<div class="px-12 text-center sm:px-0">
+				<div class="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-12 sm:h-12">
+					<i class="fas fa-bolt"></i>
+				</div>
+				<h6 class="mb-2 text-sm font-bold leading-5 tracking-wider uppercase">Creative</h6>
+				<div class="mb-2 text-gray-700">Always in search for a better way</div>
+			</div>
+			<div class="px-12 text-center sm:px-0">
+				<div class="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-12 sm:h-12">
+					<i class="fas fa-code"></i>
+				</div>
+				<h6 class="mb-2 text-sm font-bold leading-5 tracking-wider uppercase">Multidisciplinary</h6>
+				<div class="mb-2 text-gray-700">A broad spectrum of experience</div>
+			</div>
+			<div class="px-12 text-center sm:px-0">
+				<div class="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-12 sm:h-12">
+					<i class="fas fa-users"></i>
+				</div>
+				<h6 class="mb-2 text-sm font-bold leading-5 tracking-wider uppercase">Fast Learner</h6>
+				<div class="mb-2 text-gray-700">Eager to learn about new technologies</div>
+			</div>
+			<div class="px-12 text-center sm:px-0">
+				<div class="flex items-center justify-center w-10 h-10 mx-auto mb-4 rounded-full bg-indigo-50 sm:w-12 sm:h-12">
+					<i class="fas fa-users"></i>
+				</div>
+				<h6 class="mb-2 text-sm font-bold leading-5 tracking-wider uppercase">Enthusiast</h6>
+				<div class="mb-2 text-gray-700">Vim User, Arch Linux Fan</div>
+			</div>
+		</div>
+	</div>
 </template>
