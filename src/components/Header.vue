@@ -52,7 +52,7 @@
 				<ul class="flex items-center hidden space-x-8 lg:flex">
 					<li>
 						<a
-							href="public/resume.pdf"
+							href="/resume.pdf"
 							target="_blank"
 							class="
 								inline-flex
