@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "vite build && cp -R src/assets dist/src/assets",
     "preview": "vite preview"
   },
   "dependencies": {
