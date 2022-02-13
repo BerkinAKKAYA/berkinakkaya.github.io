@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "vite build && cp -R src/assets dist/src/assets",
+    "deploy": "vite build && recursive-copy src/assets dist/src/assets",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -25,8 +25,10 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^5.1.0",
+    "mkdirp": "^1.0.4",
     "postcss": "^8.4.6",
     "prettier": "^2.3.2",
+    "recursive-copy-cli": "^1.0.20",
     "tailwindcss": "^3.0.18",
     "vite": "^2.7.2"
   }
