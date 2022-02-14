@@ -166,11 +166,11 @@ export default {
 
 		<div class="grid gap-5 row-gap-5 lg:grid-cols-4 sm:grid-cols-2">
 			<a
-				class="project inline-block overflow-hidden shadow-sm border rounded bg-white relative cursor-default"
+				class="project inline-block overflow-hidden shadow-sm border rounded bg-white relative"
 				:class="
 					(!activeCategory || item.category == activeCategory ? '' : 'scale-0') +
 					' ' +
-					(item.live ? 'hover:z-10 hover:shadow-md cursor-pointer hover:scale-105' : '')
+					(item.live ? 'hover:z-10 hover:shadow-md cursor-pointer hover:scale-105' : 'cursor-default')
 				"
 				v-for="item in items"
 				target="_blank"
